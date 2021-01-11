@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'DonateBloodPage.dart';
+import 'DonateOtherPage.dart';
 
 class donate extends StatefulWidget {
   @override
@@ -65,8 +67,8 @@ class _donateState extends State<donate> {
                             RaisedButton(
                               padding: const EdgeInsets.all(0.0),
                               onPressed: () {
-                               // Navigator.of(context).pushReplacement(
-                                //    MaterialPageRoute(builder: (context) => DonateBloodScreen()));
+                                Navigator.of(context).pushReplacement(
+                                   MaterialPageRoute(builder: (context) => DonateBloodScreen()));
                               },
                               child: Container(
                                 height: 200,
@@ -85,7 +87,6 @@ class _donateState extends State<donate> {
                                   ),
                                 ),
                                 //child: Image.asset("images/donor.png", height: 100, width: 100,),
-
                               ),
 
                             ),
@@ -95,8 +96,8 @@ class _donateState extends State<donate> {
                             RaisedButton(
                               padding: const EdgeInsets.all(0.0),
                               onPressed: () {
-                              //  Navigator.of(context).pushReplacement(
-                              //      MaterialPageRoute(builder: (context) => DonateotherScreen()));
+                                Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(builder: (context) => DonateotherScreen()));
                               },
                               child: Container(
                                 height: 200,

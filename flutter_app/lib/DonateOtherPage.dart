@@ -32,10 +32,10 @@ class _DonateotherScreenState extends State<DonateotherScreen> {
                 ),
               ),
               decoration: BoxDecoration(
-                color: Colors.deepPurpleAccent,
+                color: Colors.green,
                 border: Border.all(
-                  color: Colors.black,
-                  width: 3,
+                  color: Colors.red,
+                  width: 2,
                 ),
               ),
             ),
@@ -114,7 +114,7 @@ class _DonateotherScreenState extends State<DonateotherScreen> {
                   //      MaterialPageRoute(builder: (context) => DonorContact()));
                 },
                 padding: EdgeInsets.all(20.0),
-                color: Colors.deepPurpleAccent,
+                color: Colors.green,
                 child: Text(
                     '                    Submit Your Record                    ',
                     style: TextStyle(

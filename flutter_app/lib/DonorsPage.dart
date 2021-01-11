@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'DonateSelect.dart';
 
 class DonorContact extends StatefulWidget {
   @override
@@ -17,6 +18,14 @@ class _DonorContactState extends State<DonorContact> {
           style: TextStyle(
               color: Colors.black, fontSize: 25.0, fontWeight: FontWeight.bold),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.red,
+        child: Icon(Icons.home),
+        onPressed: (){
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) => donate()));
+        },
       ),
       //drawer: Drawer(
        // child: MainDrawer(),

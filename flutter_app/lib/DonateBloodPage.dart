@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'DonateSelect.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'DonorsPage.dart';
 
 class DonateBloodScreen extends StatefulWidget {
   @override
@@ -152,9 +153,8 @@ class _DonateBloodScreenState extends State<DonateBloodScreen> {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   onPressed: Upload,
-                    //Firestore.instance.collection("Blood Data").add(data);
-                    // Navigator.of(context).pushReplacement(
-                    //    MaterialPageRoute(builder: (context) => DonorContact()));
+                   //  Navigator.of(context).pushReplacement(
+                     //   MaterialPageRoute(builder: (context) => DonorContact()));
                   padding: EdgeInsets.all(20.0),
                   color: Colors.green,
                   child: Text(
@@ -208,6 +208,8 @@ class _DonateBloodScreenState extends State<DonateBloodScreen> {
       map ['_City'] = _City;
 
       databaseReference.child(uploadId).set(map);
+      Navigator.of(context).pushReplacement(
+             MaterialPageRoute(builder: (context) => DonorContact()));
     }
   }
 }

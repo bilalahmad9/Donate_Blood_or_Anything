@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/DonateSelect.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -114,7 +115,7 @@ class _SignupScreenState extends State<SignupScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) =>  LoginScreen(),
+            builder: (context) =>  donate(),
           ),
         );
       } catch (e) {

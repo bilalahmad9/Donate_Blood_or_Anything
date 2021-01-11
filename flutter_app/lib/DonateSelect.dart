@@ -36,7 +36,7 @@ class _donateState extends State<donate> {
                   child: Column(
                     children: <Widget>[
                       SizedBox(
-                        height: 150,
+                        height: 100,
                       ),
                       Container(
                         padding: const EdgeInsets.all(10.0),

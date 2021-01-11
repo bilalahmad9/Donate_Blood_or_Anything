@@ -100,8 +100,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             borderRadius: BorderRadius.circular(24),
                           ),
                           onPressed: () {
-                            // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            //    builder: (context) => SignupScreen()));
+                             Navigator.of(context).pushReplacement(MaterialPageRoute(
+                                builder: (context) => SignupScreen()));
                           },
                           padding: EdgeInsets.all(12),
                           color: Colors.deepPurpleAccent,

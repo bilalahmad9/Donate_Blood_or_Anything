@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'splash.dart';
 import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
+import 'DonateSelect.dart';
+import 'DonateOtherPage.dart';
+import 'DonateBloodPage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: splashscreen(),
+      home: DonateBloodScreen(),
     );
   }
 }

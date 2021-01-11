@@ -13,15 +13,6 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        centerTitle: true,
-        title: Text(
-          " Sign up Screen ",
-          style: TextStyle(
-              color: Colors.black, fontSize: 25.0, fontWeight: FontWeight.bold),
-        ),
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -39,7 +30,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 keyboardType: TextInputType.emailAddress,
                 autofocus: false,
                 decoration: InputDecoration(
-                  hintText: 'Enter Your Email',
+                  hintText: 'Enter Your Name',
                   contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0)),
@@ -56,7 +47,7 @@ class _SignupScreenState extends State<SignupScreen> {
               child: TextField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  hintText: 'Phone Number',
+                  hintText: 'Enter Your Email',
                   contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0)),

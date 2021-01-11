@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "86855709598",
+    "project_id": "bloodsignup",
+    "storage_bucket": "bloodsignup.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86855709598:android:5b8239079ebd9e8a711c8f",
+        "android_client_info": {
+          "package_name": "com.example.flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86855709598-mv12q9dje00jbgm6ka793m5jid16q4fr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0CpuuwZkw_Ub3JZx5Jxk5Dv5ZbgXyTj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86855709598-mv12q9dje00jbgm6ka793m5jid16q4fr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

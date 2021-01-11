@@ -39,7 +39,11 @@ class _SignupScreenState extends State<SignupScreen> {
                       borderRadius: BorderRadius.circular(5)),
                 ),
                 keyboardType: TextInputType.text,
-                validator: (value) {},
+                validator: (value) {
+                  if(value.isEmpty){
+                    return "Please Enter your Name";
+                  }
+                },
                 //  onSaved: (value) => _email = value,
               ),
               SizedBox(height: 20,),
@@ -115,7 +119,7 @@ class _SignupScreenState extends State<SignupScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) =>  donate(),
+            builder: (context) =>  LoginScreen(),
           ),
         );
       } catch (e) {

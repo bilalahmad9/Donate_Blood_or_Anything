@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'DonateBloodPage.dart';
 import 'DonateOtherPage.dart';
+import 'DonorsPage.dart';
 
 class donate extends StatefulWidget {
   @override
@@ -52,7 +53,7 @@ class _donateState extends State<donate> {
                           ),
                         ),
                         decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
+                          color: Colors.green,
                           border: Border.all(
                             color: Colors.black,
                             width: 3,
@@ -73,7 +74,7 @@ class _donateState extends State<donate> {
                               child: Container(
                                 height: 200,
                                 width: 150,
-                                color: Colors.purpleAccent,
+                                color: Colors.red,
                                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 80),
                                 child: Text(
                                   " Donate Blood",
@@ -102,7 +103,7 @@ class _donateState extends State<donate> {
                               child: Container(
                                 height: 200,
                                 width: 150,
-                                color: Colors.purpleAccent,
+                                color: Colors.red,
                                 padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 70),
                                 child: Text(
                                   " Donate Other thing",
@@ -128,11 +129,11 @@ class _donateState extends State<donate> {
                             borderRadius: BorderRadius.circular(24),
                           ),
                           onPressed: () {
-                           // Navigator.of(context).pushReplacement(
-                            //    MaterialPageRoute(builder: (context) => DonorContact()));
+                            Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(builder: (context) => DonorContact()));
                           },
                           padding: EdgeInsets.all(15),
-                          color: Colors.deepPurpleAccent,
+                          color: Colors.green,
                           child: Text(
                               '                    Contact with Donor                    ',
                               style: TextStyle(

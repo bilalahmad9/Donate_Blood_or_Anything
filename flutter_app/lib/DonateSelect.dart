@@ -11,15 +11,6 @@ class _donateState extends State<donate> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        centerTitle: true,
-        title: Text(
-          " Select Donor Type ",
-          style: TextStyle(
-              color: Colors.black, fontSize: 25.0, fontWeight: FontWeight.bold),
-        ),
-      ),
     /*  drawer: Drawer(
         child: MainDrawer(),
       ),*/
@@ -52,7 +43,7 @@ class _donateState extends State<donate> {
                           " Donate Or Recepient",
                           style: GoogleFonts.acme(
                             textStyle: Theme.of(context).textTheme.display1,
-                            fontSize: 25,
+                            fontSize: 20,
                             fontWeight: FontWeight.w700,
                             fontStyle: FontStyle.normal,
                             color: Colors.white,
@@ -81,13 +72,13 @@ class _donateState extends State<donate> {
                                 height: 200,
                                 width: 150,
                                 color: Colors.purpleAccent,
-                                padding: const EdgeInsets.all(25.0),
+                                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 80),
                                 child: Text(
                                   " Donate Blood",
                                   style: GoogleFonts.acme(
                                     textStyle:
                                     Theme.of(context).textTheme.display1,
-                                    fontSize: 40,
+                                    fontSize: 20,
                                     fontWeight: FontWeight.w700,
                                     fontStyle: FontStyle.normal,
                                     color: Colors.white,
@@ -111,13 +102,13 @@ class _donateState extends State<donate> {
                                 height: 200,
                                 width: 150,
                                 color: Colors.purpleAccent,
-                                padding: const EdgeInsets.all(25.0),
+                                padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 70),
                                 child: Text(
                                   " Donate Other thing",
                                   style: GoogleFonts.acme(
                                     textStyle:
                                     Theme.of(context).textTheme.display1,
-                                    fontSize: 35,
+                                    fontSize: 20,
                                     fontWeight: FontWeight.w700,
                                     fontStyle: FontStyle.normal,
                                     color: Colors.white,

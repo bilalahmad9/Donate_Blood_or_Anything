@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
 import 'loginPage.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -84,14 +83,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(24),
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => LoginScreen(), fullscreenDialog: true,
-                        ),
-                      );
-                    },
+                    onPressed: SignUp,
                     padding: EdgeInsets.all(15),
                     color: Colors.deepPurpleAccent,
                     child: Text(

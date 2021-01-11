@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:loading/indicator/ball_pulse_indicator.dart';
 import 'package:loading/loading.dart';
 import 'signupPage.dart';
+import 'loginPage.dart';
 
 class splashscreen extends StatefulWidget {
   @override
@@ -18,7 +19,7 @@ class _splashscreenState extends State<splashscreen> {
     super.initState();
     Timer(Duration(seconds: 5), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => SignupScreen(),
+        builder: (context) => LoginScreen(),
       ));
     });
   }

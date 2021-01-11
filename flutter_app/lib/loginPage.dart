@@ -7,7 +7,7 @@ import 'signupPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
+import 'DonateSelect.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -84,14 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(24),
                           ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => SignupScreen(), fullscreenDialog: true,
-                              ),
-                            );
-                          },
+                          onPressed: LogIn,
                           padding: EdgeInsets.all(15),
                           color: Colors.purpleAccent,
                           child: Text('                    Log In                    ',
@@ -138,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) =>  MyApp(),
+            builder: (context) =>  donate(),
           ),
         );
       } catch (e) {

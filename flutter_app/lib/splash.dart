@@ -54,7 +54,7 @@ class _splashscreenState extends State<splashscreen> {
                           "Blood  " " OR " "  Anything ",
                           style: GoogleFonts.russoOne(
                             textStyle: Theme.of(context).textTheme.display1,
-                            fontSize: 35,
+                            fontSize: 25,
                             fontWeight: FontWeight.w700,
                             fontStyle: FontStyle.italic,
                             color: Colors.black,
@@ -67,7 +67,7 @@ class _splashscreenState extends State<splashscreen> {
                           "Donation System",
                           style: GoogleFonts.russoOne(
                             textStyle: Theme.of(context).textTheme.display1,
-                            fontSize: 35,
+                            fontSize: 25,
                             fontWeight: FontWeight.w700,
                             fontStyle: FontStyle.italic,
                             color: Colors.black,

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/OtherDonorPage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'DonateBloodPage.dart';
 import 'DonateOtherPage.dart';
@@ -122,27 +123,63 @@ class _donateState extends State<donate> {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(24),
-                          ),
-                          onPressed: () {
-                            Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(builder: (context) => DonorContact()));
-                          },
-                          padding: EdgeInsets.all(15),
-                          color: Colors.green,
-                          child: Text(
-                              '                    Contact with Donor                    ',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17.0,
-                              )),
-                        ),
+                      Container(
+                        child: Text("Contact with", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.grey),),
                       ),
+                      SizedBox(height: 20,),
+                      Row(
+                          children: <Widget>[
+                            Padding(padding: const EdgeInsets.all(10.0)),
+                            SizedBox(height: 1,),
+                            RaisedButton(
+                              padding: const EdgeInsets.all(15.0),
+                              color: Colors.green,
+                              onPressed: () {
+                                Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(builder: (context) => DonorContact()));
+                              },
+                              child: Container(
+                                child: Text(
+                                  " Blood Donors",
+                                  style: GoogleFonts.acme(
+                                    textStyle:
+                                    Theme.of(context).textTheme.display1,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w700,
+                                    fontStyle: FontStyle.normal,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 40.0,
+                            ),
+                            RaisedButton(
+                              padding: const EdgeInsets.all(15.0),
+                              color: Colors.green,
+                              onPressed: () {
+                                Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(builder: (context) => OtherDonorData()));
+                              },
+                              child: Container(
+                                child: Text(
+                                  " Other Donors",
+                                  style: GoogleFonts.acme(
+                                    textStyle:
+                                    Theme.of(context).textTheme.display1,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w700,
+                                    fontStyle: FontStyle.normal,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+
+                            ),
+                          ],
+                        ),
+                      SizedBox(height: 20,),
                     ],
                   ),
                 ),

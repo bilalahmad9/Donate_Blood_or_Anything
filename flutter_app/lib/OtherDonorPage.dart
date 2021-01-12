@@ -1,33 +1,33 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'DonateSelect.dart';
-import 'DataFetch/BloodData.dart';
+import 'DataFetch/OtherData.dart';
 
-class DonorContact extends StatefulWidget {
+class OtherDonorData extends StatefulWidget {
   @override
-  _DonorContactState createState() => _DonorContactState();
+  _OtherDonorDataState createState() => _OtherDonorDataState();
 }
 
-class _DonorContactState extends State<DonorContact> {
-  List<Data> dataList = [];
+class _OtherDonorDataState extends State<OtherDonorData> {
+  List<Data1> dataList = [];
 
   @override
   void initState() {
     super.initState();
     DatabaseReference referanceData =
-        FirebaseDatabase.instance.reference().child("Data");
+    FirebaseDatabase.instance.reference().child("Data1");
     referanceData.once().then((DataSnapshot dataSnapShot) {
       dataList.clear();
       var keys = dataSnapShot.value.keys;
       var values = dataSnapShot.value;
 
       for (var key in keys) {
-        Data data = new Data(
+        Data1 data = new Data1(
           values[key]["_name"],
           values[key]["_phone"],
-          values[key]["_BloodGroup"],
-          values[key]["_Gander"],
-          values[key]["_City"],
+          values[key]["_type"],
+          values[key]["_quantity"],
+
         );
         dataList.add(data);
       }
@@ -36,6 +36,7 @@ class _DonorContactState extends State<DonorContact> {
       });
     });
   }
+
  @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +44,7 @@ class _DonorContactState extends State<DonorContact> {
         backgroundColor: Colors.green,
         centerTitle: true,
         title: Text(
-          " All Blood Donations Record",
+          " All Other Donations Record",
           style: TextStyle(
               color: Colors.black, fontSize: 20.0, fontWeight: FontWeight.bold),
         ),
@@ -61,24 +62,24 @@ class _DonorContactState extends State<DonorContact> {
       //),
       body: dataList.length == 0
           ? Center(
-              child: Text(
-                'Please wait data loading...',
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 25,
-                ),
-              ),
-            )
+        child: Text(
+          'Please wait data loading...',
+          style: TextStyle(
+            color: Colors.grey,
+            fontSize: 25,
+          ),
+        ),
+      )
           : ListView.builder(
           itemCount: dataList.length,
           itemBuilder: (_,index){
-            return CardUI(dataList[index].name,dataList[index].phone,dataList[index].BloodGroup,dataList[index].Gander,dataList[index].City);
-      }
+            return CardUI(dataList[index].name,dataList[index].phone,dataList[index].type,dataList[index].quantity);
+          }
       ),
     );
   }
 
-  Widget CardUI(name, phone, bloodGroup, gander, city) {
+  Widget CardUI(String name, String phone, String type, String quantity) {
     return Card(
       elevation: 10,
       margin: EdgeInsets.all(15),
@@ -93,14 +94,14 @@ class _DonorContactState extends State<DonorContact> {
             SizedBox(height: 2,),
             Text(phone, style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
             SizedBox(height: 2,),
-            Text(bloodGroup, style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
+            Text(type, style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
             SizedBox(height: 2,),
-            Text(gander, style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
-            SizedBox(height: 2,),
-            Text(city, style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
+            Text(quantity, style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
           ],
         ),
       ),
     );
   }
 }
+
+

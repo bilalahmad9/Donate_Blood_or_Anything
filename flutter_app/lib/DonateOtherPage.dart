@@ -1,6 +1,7 @@
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app/OtherDonorPage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'DonateSelect.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -79,7 +80,7 @@ class _DonateotherScreenState extends State<DonateotherScreen> {
                   if(value.isEmpty){
                     return "Please Enter Your Phone Number";
                   }else{
-                    _name = value;
+                    _phone = value;
                   }
                 },
               ),
@@ -95,7 +96,7 @@ class _DonateotherScreenState extends State<DonateotherScreen> {
                   if(value.isEmpty){
                     return "Please Enter Donation Type";
                   }else{
-                    _name = value;
+                    _type = value;
                   }
                 },
               ),
@@ -111,7 +112,7 @@ class _DonateotherScreenState extends State<DonateotherScreen> {
                   if(value.isEmpty){
                     return "Please Enter Donation Qantity ";
                   }else{
-                    _name = value;
+                    _quantity = value;
                   }
                 },
               ),
@@ -165,7 +166,7 @@ class _DonateotherScreenState extends State<DonateotherScreen> {
   Future<void> Upload() async {
     if (_formkey.currentState.validate()) {
       DatabaseReference databaseReference = FirebaseDatabase.instance
-          .reference().child("Data");
+          .reference().child("Data1");
       String uploadId = databaseReference
           .push()
           .key;
@@ -177,7 +178,7 @@ class _DonateotherScreenState extends State<DonateotherScreen> {
 
       databaseReference.child(uploadId).set(map);
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => DonorContact()));
+          MaterialPageRoute(builder: (context) => OtherDonorData()));
     }
   }
 }

@@ -6,6 +6,7 @@ import 'DonateSelect.dart';
 import 'DonateOtherPage.dart';
 import 'DonateBloodPage.dart';
 import 'DonorsPage.dart';
+import 'OtherDonorPage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DonorContact(),
+      home: splashscreen(),
     );
   }
 }
